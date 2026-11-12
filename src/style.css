@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --color-canvas: #FAF7F2;
+  --color-surface: #F3EFE8;
+  --color-surface-card: #FDFBF7;
+  --color-border: #E8E1D5;
+  --color-text: #26201B;
+  --color-muted: #6B6053;
+  --color-accent: #26201B;
+  --font-display: 'Outfit', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-canvas);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F3EFE8;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D0C3;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BDB3A4;
+}
+
+/* Print styling for official GST Tax Invoice */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+  #printable-tax-invoice, #printable-tax-invoice * {
+    visibility: visible !important;
+  }
+  #printable-tax-invoice {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 24px !important;
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}

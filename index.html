@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atelier Nord — Contemporary Clothing & Essentials</title>
+    <meta name="description" content="Advanced e-commerce clothing store featuring responsive catalog filters, real-time GST calculation, coupon codes, wishlist, and validated checkout." />
+    <meta property="og:title" content="Atelier Nord — Contemporary Clothing & Essentials" />
+    <meta property="og:description" content="Advanced e-commerce clothing store featuring responsive catalog filters, real-time GST calculation, coupon codes, wishlist, and validated checkout." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body class="bg-[#FAF7F2] text-[#26201B] antialiased selection:bg-[#26201B] selection:text-[#FAF7F2]">
+    
+    <!-- Top Announcement Banner: Natural Travertine Tone -->
+    <div id="top-announcement" class="bg-[#EFE9DF] text-[#3D352C] border-b border-[#E2DAD0] text-[11px] py-1.5 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
+      <span>Complimentary Express Shipping across India on orders above ₹2,999</span>
+      <span aria-hidden="true" class="text-[#A3988A]">·</span>
+      <span class="text-[#4E4439]">
+        Seasonal voucher: <strong class="text-[#2B241D] font-mono font-bold bg-[#E2DAD0] px-1.5 py-0.5 rounded">STYLE20</strong> for 20% off
+      </span>
+    </div>
+
+    <!-- Main Navigation Header (Strict 3-Zone Top Bar Contract) -->
+    <header class="sticky top-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E8E1D5] transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-8">
+        
+        <!-- Zone 1: Wordmark Brand -->
+        <div class="flex items-center gap-4 shrink-0">
+          <button
+            type="button"
+            id="mobile-menu-btn"
+            class="md:hidden p-2 -ml-2 text-[#4D4339] hover:text-[#26201B]"
+            aria-label="Toggle navigation drawer"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+          
+          <a
+            href="#home"
+            data-nav="home"
+            class="nav-link-action text-xl sm:text-2xl font-bold tracking-tight text-[#26201B] font-display whitespace-nowrap shrink-0 hover:opacity-85 transition-opacity"
+          >
+            ATELIER NORD
+          </a>
+        </div>
+
+        <!-- Zone 2: 4-5 Clean Single-Line Navigation Links -->
+        <nav class="hidden md:flex items-center gap-7 text-xs font-semibold tracking-wider uppercase text-[#5E5347]">
+          <a href="#home" data-nav="home" class="nav-link-action py-1 relative whitespace-nowrap shrink-0 transition-colors hover:text-[#26201B]">
+            Home
+          </a>
+          <a href="#shop" data-nav="shop" data-category="All" class="nav-link-action py-1 relative whitespace-nowrap shrink-0 transition-colors hover:text-[#26201B]">
+            Shop All
+          </a>
+          <a href="#shop" data-nav="shop" data-category="Outerwear" class="nav-link-action py-1 relative whitespace-nowrap shrink-0 transition-colors hover:text-[#26201B]">
+            Outerwear
+          </a>
+          <a href="#shop" data-nav="shop" data-category="Knitwear" class="nav-link-action py-1 relative whitespace-nowrap shrink-0 transition-colors hover:text-[#26201B]">
+            Knitwear
+          </a>
+          <a href="#shop" data-nav="shop" data-category="Essentials" class="nav-link-action py-1 relative whitespace-nowrap shrink-0 transition-colors hover:text-[#26201B]">
+            Essentials
+          </a>
+        </nav>
+
+        <!-- Zone 3: Actions & Shopping Bag -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <!-- Search Expandable -->
+          <div class="relative">
+            <button
+              type="button"
+              id="search-toggle-btn"
+              class="p-2 text-[#4D4339] hover:text-[#26201B] hover:bg-[#EFEAE1] rounded-lg transition-colors"
+              aria-label="Search clothing"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </button>
+            <div id="search-input-wrapper" class="hidden absolute right-0 top-1/2 -translate-y-1/2 z-20">
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Search coats, denim, tees..."
+                class="w-52 sm:w-64 pl-8 pr-7 py-1.5 text-xs bg-[#EFECE5] border border-[#DDD5C7] text-[#26201B] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#26201B] placeholder:text-[#8C8174]"
+              />
+              <button
+                type="button"
+                id="search-close-btn"
+                class="absolute right-2 top-1/2 -translate-y-1/2 text-[#8C8174] hover:text-[#26201B] p-0.5"
+                aria-label="Close search"
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+
+          <!-- Wishlist -->
+          <button
+            type="button"
+            data-nav="wishlist"
+            class="nav-link-action p-2 text-[#4D4339] hover:text-[#26201B] hover:bg-[#EFEAE1] rounded-lg transition-colors relative"
+            aria-label="View saved wishlist"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+            <span id="wishlist-badge" class="hidden absolute top-1 right-1 w-4 h-4 text-[10px] font-bold bg-[#26201B] text-[#FAF7F2] rounded-full flex items-center justify-center font-mono">0</span>
+          </button>
+
+          <!-- User / Auth -->
+          <button
+            type="button"
+            data-nav="auth"
+            class="nav-link-action p-2 text-[#4D4339] hover:text-[#26201B] hover:bg-[#EFEAE1] rounded-lg transition-colors relative"
+            aria-label="Patron account"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </button>
+
+          <!-- Bag (Cart) CTA -->
+          <button
+            type="button"
+            data-nav="cart"
+            class="nav-link-action flex items-center gap-2 px-3 sm:px-3.5 py-2 text-xs font-semibold rounded-lg bg-[#2E2822] text-[#FAF7F2] hover:bg-[#3E352D] transition-all shadow-xs"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+            </svg>
+            <span class="hidden sm:inline">Bag</span>
+            <span id="cart-badge" class="w-4 h-4 text-[10px] bg-[#FAF7F2] text-[#26201B] rounded-full flex items-center justify-center font-mono font-bold">0</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-drawer" class="hidden fixed inset-0 z-50 md:hidden flex">
+        <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-[#26201B]/40 backdrop-blur-xs"></div>
+        <div class="relative w-4/5 max-w-xs bg-[#FAF7F2] h-full shadow-2xl p-6 flex flex-col justify-between z-10 border-r border-[#E8E1D5]">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-[#E8E1D5]">
+              <span class="text-lg font-bold font-display text-[#26201B]">ATELIER NORD</span>
+              <button type="button" id="mobile-drawer-close" class="p-1 text-[#6B6053] hover:text-[#26201B]">
+                ✕
+              </button>
+            </div>
+            <div class="mt-6 flex flex-col gap-3 text-sm font-medium text-[#4D4339]">
+              <button type="button" data-nav="home" class="nav-link-action text-left py-2 px-3 rounded-lg hover:bg-[#EFEAE1]">Home</button>
+              <button type="button" data-nav="shop" data-category="All" class="nav-link-action text-left py-2 px-3 rounded-lg hover:bg-[#EFEAE1]">All Collections</button>
+              <button type="button" data-nav="shop" data-category="Outerwear" class="nav-link-action text-left py-2 px-3 rounded-lg hover:bg-[#EFEAE1]">Outerwear & Coats</button>
+              <button type="button" data-nav="shop" data-category="Knitwear" class="nav-link-action text-left py-2 px-3 rounded-lg hover:bg-[#EFEAE1]">Knitwear & Merino</button>
+              <button type="button" data-nav="shop" data-category="Essentials" class="nav-link-action text-left py-2 px-3 rounded-lg hover:bg-[#EFEAE1]">Wardrobe Essentials</button>
+              <button type="button" data-nav="wishlist" class="nav-link-action text-left py-2 px-3 rounded-lg flex items-center justify-between hover:bg-[#EFEAE1]">
+                <span>Wishlist</span>
+                <span id="mobile-wishlist-count" class="text-xs bg-[#EFEAE1] px-2 py-0.5 rounded font-mono">0</span>
+              </button>
+              <button type="button" data-nav="cart" class="nav-link-action text-left py-2 px-3 rounded-lg flex items-center justify-between hover:bg-[#EFEAE1]">
+                <span>Shopping Bag & GST</span>
+                <span id="mobile-cart-count" class="text-xs bg-[#26201B] text-[#FAF7F2] px-2 py-0.5 rounded font-mono">0</span>
+              </button>
+              <button type="button" data-nav="auth" class="nav-link-action text-left py-2 px-3 rounded-lg hover:bg-[#EFEAE1]">
+                <span>Patron Account</span>
+              </button>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-[#E8E1D5] text-xs text-[#7A6E61]">
+            <p>Direct Atelier Support:</p>
+            <p class="text-[#26201B] font-semibold">+91 1800 210 9942</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Dynamic Page Viewport -->
+    <main id="app-viewport" class="min-h-[70vh]">
+      <!-- Views are dynamically rendered here by /src/main.js -->
+    </main>
+
+    <!-- Global Modals -->
+    <!-- 1. Size Guide Modal (cm and inches) -->
+    <div id="modal-size-guide" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
+      <div class="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-neutral-200 overflow-hidden">
+        <div class="flex items-center justify-between px-6 py-5 border-b border-neutral-200">
+          <h3 class="text-lg font-bold font-display text-neutral-900">Garment Sizing & Fit Guide</h3>
+          <button type="button" id="close-size-guide-btn" class="p-1.5 text-neutral-500 hover:text-neutral-900">✕</button>
+        </div>
+        <div class="p-6 space-y-6 max-h-[80vh] overflow-y-auto">
+          <div class="flex items-center justify-between">
+            <p class="text-xs text-neutral-500">Relaxed garment measurements. Measurements shown in centimeters (cm).</p>
+          </div>
+          <div class="overflow-x-auto border border-neutral-200 rounded-xl">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-neutral-50 text-neutral-700 font-bold border-b border-neutral-200">
+                <tr>
+                  <th class="py-3 px-4">Size</th>
+                  <th class="py-3 px-4">Chest / Bust</th>
+                  <th class="py-3 px-4">Natural Waist</th>
+                  <th class="py-3 px-4">Length</th>
+                  <th class="py-3 px-4">Fit Drape</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-neutral-200 text-neutral-800 tabular-nums">
+                <tr><td class="py-3 px-4 font-bold">XS</td><td class="py-3 px-4">86 - 91 cm</td><td class="py-3 px-4">71 - 76 cm</td><td class="py-3 px-4">68 cm</td><td class="py-3 px-4 text-neutral-500 font-sans">Slim tailored</td></tr>
+                <tr><td class="py-3 px-4 font-bold">S</td><td class="py-3 px-4">91 - 96 cm</td><td class="py-3 px-4">76 - 81 cm</td><td class="py-3 px-4">70 cm</td><td class="py-3 px-4 text-neutral-500 font-sans">Standard fit</td></tr>
+                <tr><td class="py-3 px-4 font-bold">M</td><td class="py-3 px-4">96 - 101 cm</td><td class="py-3 px-4">81 - 86 cm</td><td class="py-3 px-4">72 cm</td><td class="py-3 px-4 text-neutral-500 font-sans">Most popular</td></tr>
+                <tr><td class="py-3 px-4 font-bold">L</td><td class="py-3 px-4">101 - 106 cm</td><td class="py-3 px-4">86 - 91 cm</td><td class="py-3 px-4">74 cm</td><td class="py-3 px-4 text-neutral-500 font-sans">Relaxed boxy</td></tr>
+                <tr><td class="py-3 px-4 font-bold">XL</td><td class="py-3 px-4">106 - 111 cm</td><td class="py-3 px-4">91 - 96 cm</td><td class="py-3 px-4">76 cm</td><td class="py-3 px-4 text-neutral-500 font-sans">Generous drape</td></tr>
+                <tr><td class="py-3 px-4 font-bold">XXL</td><td class="py-3 px-4">111 - 118 cm</td><td class="py-3 px-4">96 - 104 cm</td><td class="py-3 px-4">78 cm</td><td class="py-3 px-4 text-neutral-500 font-sans">Oversized silhouette</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="bg-neutral-50 p-4 rounded-xl border border-neutral-200 text-xs text-neutral-600 space-y-1.5">
+            <p><strong class="text-neutral-900">How to measure:</strong> Measure chest horizontally across fullest point. For our 480 GSM French terry hoodies and coats, order your true size for a contemporary relaxed drape.</p>
+          </div>
+        </div>
+        <div class="px-6 py-4 bg-neutral-50 border-t border-neutral-200 flex justify-end">
+          <button type="button" id="close-size-guide-footer-btn" class="px-5 py-2 text-xs font-semibold text-white bg-neutral-900 rounded-lg">Close Guide</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Toast Container -->
+    <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 max-w-sm w-full pointer-events-none"></div>
+
+    <!-- Global Footer -->
+    <footer class="bg-[#241E1A] text-[#D6CDBC] pt-16 pb-12 border-t border-[#382F28]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 border-b border-[#382F28]">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center sm:text-left">
+          <div class="space-y-1">
+            <h4 class="text-sm font-semibold text-[#FAF7F2]">Free Express Shipping</h4>
+            <p class="text-xs text-[#A89D8C]">Across all 6-digit PIN codes over ₹2,999</p>
+          </div>
+          <div class="space-y-1">
+            <h4 class="text-sm font-semibold text-[#FAF7F2]">14-Day Exchanges</h4>
+            <p class="text-xs text-[#A89D8C]">Doorstep reverse pickup & size replacement</p>
+          </div>
+          <div class="space-y-1">
+            <h4 class="text-sm font-semibold text-[#FAF7F2]">GST Compliant Invoicing</h4>
+            <p class="text-xs text-[#A89D8C]">18% GST tax invoice generated on delivery</p>
+          </div>
+          <div class="space-y-1">
+            <h4 class="text-sm font-semibold text-[#FAF7F2]">100% Certified Fabrics</h4>
+            <p class="text-xs text-[#A89D8C]">GOTS organic cotton & Japanese selvedge</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-5 gap-10">
+        <div class="md:col-span-2 space-y-4">
+          <span class="text-xl font-bold font-display tracking-tight text-[#FAF7F2] block">
+            ATELIER NORD
+          </span>
+          <p class="text-xs text-[#B5ABA0] leading-relaxed max-w-sm">
+            Contemporary silhouettes rooted in structural pattern cutting, heavy fabric weights, and tactile organic fibers. Built with human proportion and quiet confidence.
+          </p>
+          <div class="text-[11px] text-[#A89D8C] space-y-1">
+            <p><strong class="text-[#D6CDBC]">GSTIN:</strong> 07AAACG9921D1Z8</p>
+            <p>Atelier Studio & Flagship: 14 Indiranagar 100ft Rd, Bengaluru 560038</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] mb-3">Collections</h4>
+          <ul class="space-y-2 text-xs text-[#B5ABA0]">
+            <li><button type="button" data-nav="shop" data-category="Outerwear" class="nav-link-action hover:text-[#FAF7F2]">Outerwear & Coats</button></li>
+            <li><button type="button" data-nav="shop" data-category="Knitwear" class="nav-link-action hover:text-[#FAF7F2]">Knitwear & Merino</button></li>
+            <li><button type="button" data-nav="shop" data-category="Essentials" class="nav-link-action hover:text-[#FAF7F2]">Heavyweight Essentials</button></li>
+            <li><button type="button" data-nav="shop" data-category="Men" class="nav-link-action hover:text-[#FAF7F2]">Menswear Cut</button></li>
+            <li><button type="button" data-nav="shop" data-category="Women" class="nav-link-action hover:text-[#FAF7F2]">Womenswear Cut</button></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] mb-3">Client Services</h4>
+          <ul class="space-y-2 text-xs text-[#B5ABA0]">
+            <li><button type="button" id="open-size-guide-footer" class="hover:text-[#FAF7F2]">Garment Size Guide</button></li>
+            <li><button type="button" data-nav="wishlist" class="nav-link-action hover:text-[#FAF7F2]">Saved Wishlist</button></li>
+            <li><button type="button" data-nav="cart" class="nav-link-action hover:text-[#FAF7F2]">Shopping Bag & GST</button></li>
+            <li><button type="button" data-nav="auth" class="nav-link-action hover:text-[#FAF7F2]">Track Order Status</button></li>
+            <li><span class="text-[#8C8072]">care@ateliernord.store</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] mb-3">Newsletter Voucher</h4>
+          <p class="text-xs text-[#B5ABA0] mb-3 leading-relaxed">
+            Subscribe for seasonal drop announcements and receive a 10% welcome coupon.
+          </p>
+          <div id="newsletter-box" class="space-y-2">
+            <div class="relative">
+              <input
+                type="email"
+                id="newsletter-email-input"
+                placeholder="Enter email address"
+                class="w-full px-3 py-2 text-xs bg-[#332A24] border border-[#473B32] text-[#FAF7F2] rounded-lg focus:outline-none focus:border-[#736354] placeholder:text-[#8C8072]"
+              />
+              <button
+                type="button"
+                id="newsletter-submit-btn"
+                class="absolute right-1 top-1 bottom-1 px-3 bg-[#FAF7F2] text-[#241E1A] rounded-md hover:bg-[#EFEAE2] transition-colors text-xs font-semibold"
+              >
+                Join
+              </button>
+            </div>
+            <p class="text-[10px] text-[#8C8072]">Zero spam. Unsubscribe anytime.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-[#382F28] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8C8072]">
+        <p>© 2026 Atelier Nord Apparel Studio Pvt Ltd. All rights reserved.</p>
+        <div class="flex items-center gap-4 text-[11px]">
+          <span>Accepted: UPI · RuPay · Visa · Mastercard · NetBanking · Cash on Delivery</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main Pure JavaScript Application Engine -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Atelier Nord — Contemporary Clothing & Essentials",
+  "description": "Advanced e-commerce clothing store featuring responsive catalog filters, real-time GST calculation, coupon codes, wishlist, and validated checkout.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
